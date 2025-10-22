@@ -1,7 +1,7 @@
-import type React from "react"
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import type React from "react"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -74,6 +74,11 @@ export const metadata: Metadata = {
     google: "google-site-verification-code", // User should replace with actual code
   },
   generator: "v0.app",
+  icons: {
+    icon: "/logo-contribut-s-escrita.png",
+    shortcut: "/logo-contribut-s-escrita.png",
+    apple: "/logo-contribut-s-escrita.png",
+  },
 }
 
 export default function RootLayout({
