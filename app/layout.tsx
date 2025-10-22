@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://contributcontabilidade.net.br"),
   alternates: {
-    canonical: "/",
+    canonical: "https://contributcontabilidade.net.br",
   },
   openGraph: {
     title: "Contribut Contabilidade - Contabilidade Online e Parceira",
@@ -46,18 +46,12 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo-contribut.png",
+        url: "https://contributcontabilidade.net.br/logo-contribut.png",
         width: 1200,
         height: 630,
         alt: "Contribut Contabilidade",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contribut Contabilidade - Contabilidade Online e Parceira",
-    description: "Contabilidade online desde 2011. Atendimento personalizado para sua empresa.",
-    images: ["/logo-contribut.png"],
   },
   robots: {
     index: true,
@@ -71,13 +65,12 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code", // User should replace with actual code
+    google: "google-site-verification=hLAk7cxKj9xOMJaRDFy6hekbhQITkCuR8Fx4UJjLrec",
   },
-  generator: "v0.app",
   icons: {
-    icon: "/logo-contribut-s-escrita.png",
-    shortcut: "/logo-contribut-s-escrita.png",
-    apple: "/logo-contribut-s-escrita.png",
+    icon: "https://contributcontabilidade.net.br/logo-contribut-s-escrita.png",
+    shortcut: "https://contributcontabilidade.net.br/logo-contribut-s-escrita.png",
+    apple: "https://contributcontabilidade.net.br/logo-contribut-s-escrita.png",
   },
 }
 

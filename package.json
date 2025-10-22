@@ -1,5 +1,11 @@
 {
-  "name": "my-v0-project",
+  "name": "contribut-contabilidade",
+  "author": {
+    "name": "Paulo Abreu",
+    "email": "dev.pa.aabreu18@gmail.com",
+    "url": "https://github.com/paulozy"
+  },
+  "description": "Lading page da Contribut Contabilidade",
   "version": "0.1.0",
   "private": true,
   "scripts": {
