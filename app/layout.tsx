@@ -118,6 +118,8 @@ export default function RootLayout({
             }),
           }}
         />
+
+        <meta name="google-site-verification" content="hLAk7cxKj9xOMJaRDFy6hekbhQITkCuR8Fx4UJjLrec" />
       </head>
       <body className={`font-sans antialiased`}>
         {children}
