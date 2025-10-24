@@ -69,13 +69,13 @@ export function Header() {
             onClick={() => scrollToSection("valores")}
             className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
           >
-            Valores
+            Missão
           </button>
           <Button
             onClick={() => scrollToSection("contato")}
             className="bg-primary text-primary-foreground hover:bg-primary/90"
           >
-            Fale Conosco
+            Pedir Orçamento
           </Button>
         </nav>
 
@@ -105,13 +105,13 @@ export function Header() {
               onClick={() => scrollToSection("valores")}
               className="text-left text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
             >
-              Valores
+              Missão
             </button>
             <Button
               onClick={() => scrollToSection("contato")}
               className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
             >
-              Fale Conosco
+              Pedir Orçamento
             </Button>
           </nav>
         </div>

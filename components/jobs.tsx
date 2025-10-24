@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card"
-import { Calculator, FileText, Users2, Check } from "lucide-react"
+import { Calculator, Check, FileText, Lightbulb, Users2 } from "lucide-react"
 
 export function ServicosSection() {
   return (
@@ -14,7 +14,7 @@ export function ServicosSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {/* Área Contábil */}
           <Card className="p-8 hover:shadow-xl transition-shadow">
             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
@@ -88,7 +88,7 @@ export function ServicosSection() {
           </Card>
 
           {/* Recursos Humanos */}
-          <Card className="p-8 hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
+          <Card className="p-8 hover:shadow-xl transition-shadow">
             <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
               <Users2 className="h-7 w-7 text-primary" />
             </div>
@@ -127,6 +127,51 @@ export function ServicosSection() {
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground leading-relaxed">Sistema de Gestão de RH</span>
+              </li>
+            </ul>
+          </Card>
+
+          <Card className="p-8 hover:shadow-xl transition-shadow">
+            <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+              <Lightbulb className="h-7 w-7 text-primary" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Consultoria</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Planejamento tributário estratégico para redução de impostos
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Recuperação de créditos tributários e restituição de impostos
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Consultoria contábil e pareceres técnicos especializados
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Reestruturação societária e reorganização empresarial
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Auditoria fiscal preventiva e compliance tributário
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">
+                  Análise de incentivos fiscais e benefícios tributários
+                </span>
               </li>
             </ul>
           </Card>

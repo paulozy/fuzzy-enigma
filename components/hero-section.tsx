@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -16,11 +16,6 @@ export function HeroSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary w-fit">
-              <CheckCircle2 className="h-4 w-4" />
-              Atuando desde 2011
-            </div>
-
             <h1 className="text-4xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl">
               Contabilidade Online e Parceira
             </h1>
