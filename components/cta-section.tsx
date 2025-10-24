@@ -1,26 +1,18 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 
 export function CTASection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+  const handleWhatsAppClick = () => {
+    const phone = "5545991490888"
+    const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para serviços contábeis.")
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    const whatsappUrl = isMobile
+      ? `whatsapp://send?phone=${phone}&text=${message}`
+      : `https://web.whatsapp.com/send?phone=${phone}&text=${message}`
+    window.open(whatsappUrl, "_blank")
   }
 
   return (
@@ -64,7 +56,6 @@ export function CTASection() {
                     <a href="tel:+5545991490888" className="text-muted-foreground hover:text-primary transition-colors">
                       (45) 99149-0888
                     </a>
-                    <p className="text-sm text-muted-foreground/80 mt-1">Ruberlândio O. Santos</p>
                   </div>
                 </div>
               </Card>
@@ -83,68 +74,30 @@ export function CTASection() {
             </div>
           </div>
 
-          <Card className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Nome Completo
-                </label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Seu nome"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
-              </div>
+          <Card className="p-8 lg:p-12 flex flex-col items-center justify-center text-center bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+            <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mb-6">
+              <MessageCircle className="h-10 w-10 text-primary" />
+            </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="seu@email.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                />
-              </div>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">
+              Pronto para Transformar sua Contabilidade?
+            </h3>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Telefone
-                </label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  placeholder="(00) 00000-0000"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                />
-              </div>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-md">
+              Fale diretamente com nossos especialistas pelo WhatsApp e receba um atendimento personalizado para as
+              necessidades da sua empresa.
+            </p>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Mensagem
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Como podemos ajudar sua empresa?"
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                />
-              </div>
+            <Button
+              onClick={handleWhatsAppClick}
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 h-auto"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Solicitar Orçamento no WhatsApp
+            </Button>
 
-              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
-                Enviar Mensagem
-              </Button>
-            </form>
+            <p className="text-sm text-muted-foreground mt-6">Resposta rápida e sem compromisso</p>
           </Card>
         </div>
       </div>
